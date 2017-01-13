@@ -14,10 +14,10 @@
     <body>
       <ul class="topnav">
   	<li><a class="active" href="#home">WCSD</a></li>
-  	<li><a href="#contact">Shop</a></li>
+  	<li id="shop"><a href="#shop">Shop</a></li>
   	<li><a href="#news">News</a></li>
-  	<li><a href="#contact">Contact</a></li>
-  	<li class="right"><a href="#about">About</a></li>
+  	<li class="right"><a href="#sign-up">Sign Up</a></li>
+    <li class="right"><a href="#sign-in">Sign In</a></li>
 	</ul>
 
 	<div class="centered">
@@ -29,10 +29,46 @@
 		<!-- <p class="location">Anchorage, Alaska</p> -->
 		<div id="time">
 		<span id="time-time"></span>
-			<span id="time-zone-name">Worldwide</span>
 		</div>
 
 	</div>
+
+  <div class="shop wrapper">
+      <div class="img-wrapper hover">
+        <figure><img class="top"src="https://s-media-cache-ak0.pinimg.com/564x/69/0f/12/690f1298972d75cea757848bcefdccca.jpg"></img></figure>
+<p>WCSD / HAT</p>
+      </div>
+      <div class="img-wrapper hover">
+        <figure><img class="img-responsive"src="https://s-media-cache-ak0.pinimg.com/564x/69/0f/12/690f1298972d75cea757848bcefdccca.jpg"></img></figure>
+        <p>WCSD / UNISEX-T</p>
+      </div>
+      <div class="img-wrapper hover">
+        <figure><img class="img-responsive"src="https://s-media-cache-ak0.pinimg.com/564x/69/0f/12/690f1298972d75cea757848bcefdccca.jpg"></img></figure>
+        <p>WCSD / SWEATER</p>
+      </div>
+  </div>
+
+  <div class="stripe">
+    <form action="/orders" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_QRcIQ8ZK0v1urwX413XFXyG1"
+    data-amount="999"
+    data-name="Demo Site"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto">
+  </script>
+</form>
+  </div>
+
+  <div class="footer">
+    <ul>
+      <li class="left"><a href="#contact">Contact</a></li>
+      <li class="left"><a href="#about">About</a></li>
+
+    </ul>
+  </div>
 
     </body>
 </html>
