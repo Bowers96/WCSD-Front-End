@@ -4,6 +4,8 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 body {
 	margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
 	/*background: url('http://payload293.cargocollective.com/1/16/517748/8168844/break-7484_1000.jpg');*/
 	/*background: rgb(155, 89, 5);
 	background-repeat: no-repeat;
@@ -38,6 +40,7 @@ h1 {
 }
 
 p {
+  margin-top: 10px;
 	margin-bottom: 4px;
 	text-align: center;
 	font-size: 18px;
@@ -101,6 +104,17 @@ ul.topnav li.right {
 	float: right;
 }
 
+ul li.left a {
+  list-style-type: none;
+  margin: 0;
+  padding-right: 50px;
+  overflow: hidden;
+  font-family: 'Megrim', cursive;
+  color: white;
+}
+
+
+
 #diamond {
    width: 130px;
    height: 130px;
@@ -120,6 +134,86 @@ ul.topnav li.right {
    transform-origin: 0 100%;
 }
 
+.shop {
+  display: none;
+}
+
+.wrapper {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+}
+
+.top {
+  cursor: pointer;
+  margin-top: 15%;
+  padding: 4px;
+  display: inline-block;
+  max-height: 100%;
+  width: auto;
+}
+
+.img-responsive {
+  cursor: pointer;
+  margin-top: 15%;
+  padding: 4px;
+  display: inline-block;
+  max-height: 100%;
+  width: auto;
+}
+
+.img-wrapper {
+  display: inline-block;
+  text-align: center;
+}
+
+/* Opacity #1 */
+.hover figure .top {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover figure:hover .top {
+	opacity: .5;
+}
+
+.hover figure .img-responsive {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover figure:hover .img-responsive {
+	opacity: .5;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: black;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+
+.img-responsive{
+  margin-top: 7%;
+  min-width: 300px;
+  }
+
+  .top {
+    margin-top: 45%;
+  }
+
+}
 
 @media screen and (max-width: 500px) {
     ul.topnav li.right,
