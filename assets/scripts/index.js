@@ -13,3 +13,4 @@ $(() => {
 // use require without a reference to ensure a file is bundled
 require('./example');
 require('./time');
+require('./views');
