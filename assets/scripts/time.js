@@ -20,16 +20,17 @@ function fixMinuteSecondZero(num) {
 function updateClock() {
   let now = new Date(); // current date
   let months = ['January', 'February', '...']; // you get the idea
-  let time = fixMinuteSecondZero(fix24HourTime(now.getHours())) + ':' + fixMinuteSecondZero(now.getMinutes()) + ':' + fixMinuteSecondZero(now.getSeconds()), // again, you get the idea
+  let time = fixMinuteSecondZero(fix24HourTime(now.getHours())) + ':' + fixMinuteSecondZero(now.getMinutes()), // again, you get the idea
 
     // a cleaner way than string concatenation
     date = [now.getDate(),
       months[now.getMonth()],
       now.getFullYear()
     ].join(' ');
-
+  let str = [date, time].join(' / ');
+  console.log(str);
   // set the content of the element with the ID time to the formatted string
-  document.getElementById('time-time').innerHTML = [date, time].join(' / ');
+  $('.time-time').html(str);
 
   // call this function again in 1000ms
   setTimeout(updateClock, 1000);
