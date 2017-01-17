@@ -28,7 +28,6 @@ function updateClock() {
       now.getFullYear()
     ].join(' ');
   let str = [date, time].join(' / ');
-  console.log(str);
   // set the content of the element with the ID time to the formatted string
   $('.time-time').html(str);
 

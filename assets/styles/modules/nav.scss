@@ -1,0 +1,49 @@
+/**
+ * Site Nav
+ */
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: 'Megrim', cursive;
+
+    &-item-link {
+      display: block;
+      margin: 0;
+      padding: 14px 16px;
+      text-align: center;
+      text-decoration: none;
+      list-style: none;
+      font-family: 'Megrim', cursive;
+      color: white;
+
+      &:hover:not(.active) {
+      	background-color: black;
+      	text-decoration: underline;
+      }
+
+      &.active {
+        border: 1px solid white;
+      	font-size: 30px;
+      	padding: 4px;
+      }
+    }
+
+    &-item-left {
+      float: left;
+    }
+
+    &-item-right {
+    	float: right;
+    }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-item-right,
+  .nav-item {
+  	float: none;
+  }
+}

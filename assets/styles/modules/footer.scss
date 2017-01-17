@@ -10,4 +10,14 @@
   padding: 1rem;
   background-color: black;
   text-align: center;
+
+  &-item-link {
+    color: white;
+    font-family: 'Megrim', cursive;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

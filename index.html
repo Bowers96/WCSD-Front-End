@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>WCSD</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags unless you know what you are doing -->
@@ -12,16 +12,22 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-       <ul class="topnav">
-      	<li><a class="active" href="#home">WCSD</a></li>
-      	<li id="shop"><a href="#shop">Shop</a></li>
-      	<li><a href="#news">News</a></li>
-      	<li class="right"><a href="#sign-up">Sign Up</a></li>
-        <li class="right"><a href="#sign-in">Sign In</a></li>
-    	</ul>
 
-	 <div class="centered">
+      <!-- Site Nav -->
+      <div class="nav">
+        <ul class="nav-items">
+        	<li class="nav-item nav-item-left"><a class="nav-item-link active" href="#home">WCSD</a></li>
+        	<li class="nav-item nav-item-left" id="shop"><a class="nav-item-link" href="#shop">Shop</a></li>
+        	<li class="nav-item nav-item-left"><a class="nav-item-link" id="cart" href="#news">Cart</a></li>
+        	<li class="nav-item nav-item-right" class="sign-up" id="up"><a class="nav-item-link">Sign Up</a></li>
+          <li class="nav-item nav-item-right" class="sign-in" id="in"><a class="nav-item-link" href="#sign-in">Sign In</a></li>
+        </ul>
+      </div>
 
+  <!-- Center page content -->
+	 <div class="content">
+
+    <!-- Logo animation -->
     <div class="diamond">
       <p class="wcsd fade-in">WCSD</p>
         <div id="top" class="line">
@@ -45,7 +51,9 @@
       </div>
     </div>
 	 </div>
+   <!-- /Logo animation -->
 
+   <!-- Shop view -->>
    <div class="shop wrapper">
 
     <div class="logo">
@@ -60,20 +68,22 @@
 		  </div>
     </div>
 
-      <div class="img-wrapper hover">
-        <figure><img class="top" id="man1"alt="man1" src="http://i.imgur.com/dZdRwsC.png" /></figure>
+      <div id="first" class="img-wrapper shop-item hover">
+        <figure><img class="shop-item-img top" id="man1"alt="man1" src="http://i.imgur.com/dZdRwsC.png" /></figure>
         <p class="title-info">WCSD / UNISEX-T</p>
       </div>
-      <div class="img-wrapper hover">
-        <figure><img class="img-responsive" id="man2"alt="man2" src="http://i.imgur.com/SKz3LaG.png" /></figure>
+      <div class="img-wrapper shop-item hover">
+        <figure><img class="shop-item-img img-responsive" id="man2"alt="man2" src="http://i.imgur.com/SKz3LaG.png" /></figure>
         <p class="title-info">WCSD / HAT</p>
       </div>
-      <div class="img-wrapper hover">
-        <figure><img class="img-responsive" id="man3"alt="man3" src="http://i.imgur.com/HTARzVN.png" /></figure>
+      <div class="img-wrapper shop-item hover">
+        <figure><img class="shop-item-img img-responsive" id="man3"alt="man3" src="http://i.imgur.com/HTARzVN.png" /></figure>
         <p class="title-info">WCSD / SWEATER</p>
       </div>
   </div>
+  <!-- /Shop view -->
 
+  <!-- Stripe -->
   <div class="stripe">
     <form action="/orders" method="POST">
       <script
@@ -87,7 +97,10 @@
         </script>
     </form>
   </div>
+  <!-- /Stripe -->
 
+
+  <!-- Unisex-T -->
   <div class="item-one">
     <div class="logo item-logo">
       <div class="title-two" id="diamond-two">
@@ -113,6 +126,7 @@
         $38
       </p>
 
+      <form data-item="unisex-t" data-price="210" class="products">
       <select id="size" name="size">
         <option value="36217">Medium</option>
         <option value="36218">Large</option>
@@ -121,11 +135,15 @@
 
       <input class="button" name="commit" type="submit" value="add to cart">
       <a href="/shop" class="button-continue keep-shopping">keep shopping</a>
+    </form>
 
       <a href="" class="next">next item &gt;</a>
     </div>
   </div>
 
+  <!-- /Unisex-T -->
+
+<!-- Hat -->
 <div class="item-one hat">
     <div class="logo item-logo">
       <div class="title-two" id="diamond-two">
@@ -151,6 +169,7 @@
         $30
       </p>
 
+      <form data-item="hat" data-price="20" class="products">
       <select id="size" name="size">
         <option value="36217">Medium</option>
         <option value="36218">Large</option>
@@ -159,11 +178,14 @@
 
       <input class="button" name="commit" type="submit" value="add to cart">
       <a href="/shop" class="button-continue keep-shopping">keep shopping</a>
+    </form>
 
       <a href="" class="next">next item &gt;</a>
     </div>
   </div>
+<!-- /Hat -->
 
+<!-- Sweater -->
   <div class="item-one sweater">
     <div class="logo item-logo">
       <div class="title-two" id="diamond-two">
@@ -188,7 +210,7 @@
       <p class="item-text price">
         $58
       </p>
-
+      <form data-item="sweater" data-price="200" class="products">
       <select id="size" name="size">
         <option value="36217">Medium</option>
         <option value="36218">Large</option>
@@ -197,11 +219,13 @@
 
       <input class="button" name="commit" type="submit" value="add to cart">
       <a href="/shop" class="button-continue keep-shopping">keep shopping</a>
-
+    </form>
       <a href="" class="next">next item &raquo;</a>
     </div>
   </div>
+<!-- /Sweater -->
 
+<!-- About Page -->
   <article class="about-wcsd">
     <div class="logo item-logo">
       <div class="title-two" id="diamond-two">
@@ -223,16 +247,19 @@
       <p id="about">Over its 1 month period, WCSD has worked with some of our generation's most groundbreaking designers, artists, photographers and musicians - all who have helped continue to define its unique identity and attitude.</p>
   </article>
 
+<!-- /About Page -->
 
+<!-- Cart -->
   <div id="content" style="opacity: 1;">
     <div id="cart-header">
-    <div id="tabs"><div class="tab selected"><b>EDIT / VIEW CART</b></div>
+    <div id="tabs">
+      <div class="tab selected"><b>EDIT / VIEW CART</b></div>
       <p id="cart-count">
         <span id="items-count">1 item</span> in your cart.</p>
     </div>
     <div id="cart-body">
       <table>
-        <tbody>
+        <tbody id="cart-body-table-body">
           <tr id="item_38081" style="display: none;">
             <td class="cart-image">
               <a href="/shop/shirts/tityqhpuk/x4crqw3ku">
@@ -264,19 +291,63 @@
       <p>subtotal:&nbsp;<span><span class="subtotal-span">$0</span></span></p>
     </div>
       <div id="cart-footer">
-        <a href="https://www.supremenewyork.com/checkout" class="button checkout">checkout now</a>
-        <a href="/shop" class="button continue">keep shopping</a>
       </div>
+      <a href="https://www.supremenewyork.com/checkout" class="checkout">checkout now</a>
+      <a href="/shop" class="continue">keep shopping</a>
     </div>
   </div>
+<!-- /Cart -->
 
+<!-- Sign Up -->
+<div class="authentication">
+
+    <div class="logo item-logo">
+      <div class="title-two" id="diamond-two">
+        <h1 class="two"> WCSD </h1>
+      </div>
+
+      <p class="p-two"> West Coast Street Design </p>
+
+      <div class="time">
+        <span class="time-time"></span>
+      </div>
+    </div>
+<div class="sign-up">
+      <form id="sign-up">
+        <input class="input" type="text" name="credentials[email]" placeholder="email"><br>
+        <input class="input" type="password" name="credentials[password]" placeholder="password"><br>
+        <input class="input" type="password" name="credentials[password_confirmation]" placeholder="confirm password"><br>
+        <input type="submit" class="btn-one" href="#"><i>sign up</i></input>
+      </form>
+  </div>
+</div>
+
+
+
+<!-- Sign In -->
+
+<!-- Sign In -->
+
+<div class="sign-in">
+        <form id="sign-in">
+          <input class="input" type="text" name="credentials[email]" placeholder="email"><br>
+          <input class="input" type="password" name="credentials[password]" placeholder="password"><br>
+          <input type="submit" class="btn-two" href="#"><i>sign in</i></input>
+        </form>
+      </div>
+
+
+<!-- /Sign In -->
+
+<!-- Footer -->
   <div class="footer">
-    <ul>
-      <li class="left"><a href="#contact">Contact</a></li>
-      <li class="left about"><a href="#about">About</a></li>
+    <ul class="footer-items">
+      <li class="footer-item"><a class="footer-item-link" href="#contact">Contact</a></li>
+      <li class="footer-item about"><a class="footer-item-link" href="#about">About</a></li>
 
     </ul>
   </div>
+<!-- /Footer -->
 
     </body>
 </html>
