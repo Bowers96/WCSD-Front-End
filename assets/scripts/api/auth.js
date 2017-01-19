@@ -1,11 +1,11 @@
 'use strict';
 
 // const app = require('../config.js');
+const app = require('../config.js');
 const store = require('../store');
+window.app = app;
+app.host = app.apiOrigins.production
 
-let app = {
-  host: "http://localhost:4741"
-};
 
 const signUp = function(data) {
   return $.ajax({

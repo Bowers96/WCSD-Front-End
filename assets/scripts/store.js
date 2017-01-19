@@ -2,7 +2,6 @@
 
 const store = {
   host: 'http://localhost:4741/',
-  cart: []
 };
 
 window.store = store;

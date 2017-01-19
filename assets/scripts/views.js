@@ -1,4 +1,10 @@
 'use strict';
+import {
+  updateCart,
+  deleteCart
+} from './api/carts';
+
+
 
 $('#up').on('click', function() {
   $('.authentication').show();
@@ -7,6 +13,7 @@ $('#up').on('click', function() {
   $('#content').hide();
   $('.about-wcsd').hide();
   $('.shop').hide();
+  $('.signout').hide();
 });
 
 $('#in').on('click', function() {
@@ -16,6 +23,7 @@ $('#in').on('click', function() {
   $('#content').hide();
   $('.about-wcsd').hide();
   $('.shop').hide();
+  $('.signout').hide();
 });
 
 
@@ -30,6 +38,7 @@ $('#man1').on('click', function() {
   $('.sign-in').hide();
   $('#content').hide();
   $('.about-wcsd').hide();
+  $('.signout').hide();
 });
 
 $('#cart').on('click', function() {
@@ -40,6 +49,8 @@ $('#cart').on('click', function() {
   $('.sign-in').hide();
   $('.authentication').hide();
   $('.about-wcsd').hide();
+  $('.item-one').hide();
+  $('.signout').hide();
 });
 
 
@@ -51,6 +62,7 @@ $('#man2').on('click', function() {
   $('.authentication').hide();
   $('.sign-in').hide();
   $('#content').hide();
+  $('.signout').hide();
 
 });
 
@@ -62,6 +74,7 @@ $('#man3').on('click', function() {
   $('.authentication').hide();
   $('.sign-in').hide();
   $('#content').hide();
+  $('.signout').hide();
 });
 
 $('.active').on('click', function() {
@@ -72,6 +85,7 @@ $('.active').on('click', function() {
   $('.authentication').hide();
   $('.sign-in').hide();
   $('#content').hide();
+  $('.signout').hide();
 });
 
 $('#shop').on('click', function() {
@@ -82,6 +96,7 @@ $('#shop').on('click', function() {
   $('.about-wcsd').hide();
   $('.authentication').hide();
   $('.sign-in').hide();
+  $('.signout').hide();
 });
 
 $('.about').on('click', function() {
@@ -94,10 +109,36 @@ $('.about').on('click', function() {
   $('.authentication').hide();
   $('.sign-in').hide();
   $('#content').hide();
+  $('.signout').hide();
 });
 
+$('#out').on('click', function() {
+  $('.signout').show();
+  $('.content').hide();
+  $('.shop').hide();
+  $('.item-one').hide();
+  $('.hat').hide();
+  $('.sweater').hide();
+  $('.authentication').hide();
+  $('.sign-in').hide();
+  $('#content').hide();
+  $('.about-wcsd').hide();
+});
 
-function translateItemToCartItem(item) {
+$('.button-continue').on('click', function() {
+  $('.item-one').hide();
+  $('.shop').show();
+});
+
+$('.delete').on('click', function() {
+  deleteCart();
+})
+
+
+export function translateItemToCartItem(item) {
+  if (!item.itemId) {
+    return ""
+  }
   return `<tr id="${item.itemId}" >
 
     <td class="cart-qty">1</td>
@@ -105,7 +146,7 @@ function translateItemToCartItem(item) {
     <td class"cart-item-size">${item.size}</td>
     <td class="cart-remove">
       <form accept-charset="UTF-8"  class="intform" >
-        <button class="button remove" type="submit">remove</button>
+        <button class="button remove" id="removed" type="submit">remove</button>
       </form>
     </td>
     <td class="cart-price">
@@ -129,33 +170,35 @@ $('.products').on('submit', function(e) {
   };
 
 
-  window.store.cart.push(item);
-  $('#cart-body-table-body').append(translateItemToCartItem(item))
-  // console.log(sumCartPrices());
+  window.store.cart.items.push(item);
+  updateCart()
+    .then(() => {
+      $('#cart-body-table-body').append(translateItemToCartItem(item))
+      $(`#${item.itemId}`).find('form').on('submit', function(e) {
+        e.preventDefault();
+        console.log("RADICAL")
+        removeFromCart(item.itemId);
+        updateCart();
+        $(`#${item.itemId}`).remove();
+      })
+
+    })
   $('.subtotal-span').html(`$${sumCartPrices()}`)
 });
 
 
-function removeFromCart(id) {
+export function removeFromCart(id) {
   console.log(id)
-  window.store.cart = window.store.cart.filter(e => {
-    console.log(e)
-  })
+  window.store.cart.items = window.store.cart.items.filter(e => {
+    return e.itemId !== id
+  });
+  $(`#${id}`).remove();
+  $('.subtotal-span').html(`$${sumCartPrices()}`)
+  return window.store.cart;
 }
 
-function sumCartPrices() {
-  return window.store.cart.reduce((p, e) => {
-    return parseInt(p) + parseInt(e.itemPrice);
+export function sumCartPrices() {
+  return window.store.cart.items.reduce((p, e) => {
+    return parseInt(p) + parseInt(e.itemPrice || '0');
   }, 0)
 }
-
-
-$('body').on('submit', '.intform', e => {
-  e.preventDefault();
-
-  let parent = $(e.target).parent().parent();
-  parent.remove();
-  removeFromCart(parent.attr('id'));
-
-
-})

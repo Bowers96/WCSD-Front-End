@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://ga-wdi-boston.herokuapp.com',
+    production: 'https://secret-journey-84193.herokuapp.com',
     development: 'http://localhost:4741'
   },
 };
