@@ -18,8 +18,9 @@
         <ul class="nav-items">
         	<li class="nav-item nav-item-left"><a class="nav-item-link active" href="#home">WCSD</a></li>
         	<li class="nav-item nav-item-left" id="shop"><a class="nav-item-link" href="#shop">Shop</a></li>
-        	<li class="nav-item nav-item-left"><a class="nav-item-link" id="cart" href="#news">Cart</a></li>
-        	<li class="nav-item nav-item-right" class="sign-up" id="up"><a class="nav-item-link">Sign Up</a></li>
+        	<li class="nav-item nav-item-left"><a class="nav-item-link" id="cart" href="#cart">Cart</a></li>
+          <!-- <li class="nav-item nav-item-right" id="out"><a class="nav-item-link sign-out">Sign Out</a></li> -->
+        	<li class="nav-item nav-item-right" class="sign-up" id="up"><a class="nav-item-link" href="#sign-up">Sign Up</a></li>
           <li class="nav-item nav-item-right" class="sign-in" id="in"><a class="nav-item-link" href="#sign-in">Sign In</a></li>
         </ul>
       </div>
@@ -126,16 +127,17 @@
         $38
       </p>
 
-      <form data-item="unisex-t" data-price="210" class="products">
+      <form data-item="unisex-t" data-price="38" class="products">
       <select id="size" name="size">
-        <option value="36217">Medium</option>
-        <option value="36218">Large</option>
-        <option value="36219">XLarge</option>
+        <option value="medium">medium</option>
+        <option value="large">large</option>
+        <option value="xlarge">xlarge</option>
       </select>
 
       <input class="button" name="commit" type="submit" value="add to cart">
-      <a href="/shop" class="button-continue keep-shopping">keep shopping</a>
     </form>
+
+      <a class="button-continue keep-shopping">keep shopping</a>
 
       <a href="" class="next">next item &gt;</a>
     </div>
@@ -169,17 +171,17 @@
         $30
       </p>
 
-      <form data-item="hat" data-price="20" class="products">
+      <form data-item="hat" data-price="30" class="products">
       <select id="size" name="size">
-        <option value="36217">Medium</option>
-        <option value="36218">Large</option>
-        <option value="36219">XLarge</option>
+        <option value="medium">medium</option>
+        <option value="large">large</option>
+        <option value="xlarge">xlarge</option>
       </select>
 
       <input class="button" name="commit" type="submit" value="add to cart">
-      <a href="/shop" class="button-continue keep-shopping">keep shopping</a>
     </form>
 
+      <a class="button-continue keep-shopping">keep shopping</a>
       <a href="" class="next">next item &gt;</a>
     </div>
   </div>
@@ -210,15 +212,15 @@
       <p class="item-text price">
         $58
       </p>
-      <form data-item="sweater" data-price="200" class="products">
+      <form data-item="sweater" data-price="58" class="products">
       <select id="size" name="size">
-        <option value="36217">Medium</option>
-        <option value="36218">Large</option>
-        <option value="36219">XLarge</option>
+        <option value="medium">medium</option>
+        <option value="large">large</option>
+        <option value="xlarge">xlarge</option>
       </select>
 
       <input class="button" name="commit" type="submit" value="add to cart">
-      <a href="/shop" class="button-continue keep-shopping">keep shopping</a>
+      <a class="button-continue keep-shopping">keep shopping</a>
     </form>
       <a href="" class="next">next item &raquo;</a>
     </div>
@@ -251,49 +253,37 @@
 
 <!-- Cart -->
   <div id="content" style="opacity: 1;">
+    <div class="logo item-logo" id="logo-cart">
+      <div class="title-two" id="diamond-two">
+        <h1 class="two"> WCSD </h1>
+      </div>
+
+      <p class="p-two"> West Coast Street Design </p>
+
+      <div class="time">
+        <span class="time-time"></span>
+      </div>
+    </div>
+
     <div id="cart-header">
     <div id="tabs">
       <div class="tab selected"><b>EDIT / VIEW CART</b></div>
-      <p id="cart-count">
-        <span id="items-count">1 item</span> in your cart.</p>
     </div>
     <div id="cart-body">
       <table>
         <tbody id="cart-body-table-body">
-          <tr id="item_38081" style="display: none;">
-            <td class="cart-image">
-              <a href="/shop/shirts/tityqhpuk/x4crqw3ku">
-                <img alt="Gvfbj2vsmga" height="45" src="//d17ol771963kd3.cloudfront.net/120887/ca/GVFBj2VSmgA.jpg" width="45">
-              </a>
-            </td>
-            <td class="cart-description">Satin Western Shirt &amp;raquo;<br>Style: Burgundy<br>Size: Medium
-            </td>
-            <td class="cart-qty"></td>
-            <td class="cart-remove">
-              <form accept-charset="UTF-8" action="/shop/170152/remove" class="intform" data-remote="true" method="post">
-                <div style="margin:0;padding:0;display:inline">
-                  <input name="utf8" type="hidden" value="✓">
-                  <input name="_method" type="hidden" value="delete">
-                  <input name="authenticity_token" type="hidden" value="9vrGdCXPb2Y+uy3E7aw8fxDU6IzMQKmQixIpilQI8Vs=">
-                </div>
-                <input id="size" name="size" type="hidden" value="38081">
-                <button class="button remove" type="submit">remove</button>
-              </form>
-            </td>
-            <td class="cart-price">
-              <span class="cart-price-span">$138</span>
-            </td>
-          </tr>
         </tbody>
       </table>
     </div>
     <div id="cart-subtotal">
       <p>subtotal:&nbsp;<span><span class="subtotal-span">$0</span></span></p>
     </div>
-      <div id="cart-footer">
-      </div>
-      <a href="https://www.supremenewyork.com/checkout" class="checkout">checkout now</a>
-      <a href="/shop" class="continue">keep shopping</a>
+
+    </div>
+    <div id="cart-footer">
+      <a href="#" class="checkout">checkout now</a>
+      <a href="#" class="continue">keep shopping</a>
+      <a href="#" class="delete">delete cart</a>
     </div>
   </div>
 <!-- /Cart -->
@@ -301,7 +291,7 @@
 <!-- Sign Up -->
 <div class="authentication">
 
-    <div class="logo item-logo">
+    <div class="logo item-logo" id="logo-in">
       <div class="title-two" id="diamond-two">
         <h1 class="two"> WCSD </h1>
       </div>
@@ -329,6 +319,19 @@
 <!-- Sign In -->
 
 <div class="sign-in">
+  <div class="logo item-logo" id="logo-up">
+    <div class="title-two" id="diamond-two">
+      <h1 class="two"> WCSD </h1>
+    </div>
+
+    <p class="p-two"> West Coast Street Design </p>
+
+    <div class="time">
+      <span class="time-time"></span>
+    </div>
+  </div>
+
+  <div class="out"><p class="sign-in-text">Sign in if you want to add some items to your cart and come back later.</p></div>
         <form id="sign-in">
           <input class="input" type="text" name="credentials[email]" placeholder="email"><br>
           <input class="input" type="password" name="credentials[password]" placeholder="password"><br>
@@ -339,12 +342,33 @@
 
 <!-- /Sign In -->
 
+<!-- Sign Out -->
+  <div class="signout">
+    <div class="logo item-logo">
+      <div class="logo-out">
+      <div class="title-two" id="diamond-two">
+        <h1 class="two"> WCSD </h1>
+      </div>
+
+      <p class="p-two"> West Coast Street Design </p>
+
+      <div class="time">
+        <span class="time-time"></span>
+      </div>
+    </div>
+    </div>
+
+    <p class="out">Thank you for checking out this month's products. We are a small and
+    upcoming business and will have new products showing up every month.</p>
+  </div>
+
+<!-- /Sign Out -->
+
 <!-- Footer -->
   <div class="footer">
     <ul class="footer-items">
-      <li class="footer-item"><a class="footer-item-link" href="#contact">Contact</a></li>
+      <li class="footer-item" id="out"><a class="footer-item-link sign-out">Sign Out</a></li>
       <li class="footer-item about"><a class="footer-item-link" href="#about">About</a></li>
-
     </ul>
   </div>
 <!-- /Footer -->
