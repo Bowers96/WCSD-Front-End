@@ -17,7 +17,6 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 .content {
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .logo {
@@ -240,6 +239,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   cursor: pointer;
   background: white;
   color: black;
+  text-decoration: none;
 }
 
 .keep-shopping:hover {
@@ -270,7 +270,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 .about-wcsd {
   display: none;
-  width: 28%;
+  width: 45%;
   text-align: left;
   margin: 12% auto;
 }
@@ -278,9 +278,9 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 #about {
   text-align: left;
   font-family: "Courier New", "Courier", "Monaco";
-  font-size: 1em;
+  font-size: 12px;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 @media screen and (max-width: 500px) {

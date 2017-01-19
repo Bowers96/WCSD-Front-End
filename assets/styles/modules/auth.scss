@@ -10,6 +10,14 @@
 width: 5%;
 }
 
+#sign-in {
+  margin-top:  -125px;
+}
+
+#sign-up {
+  margin-top: -165px;
+}
+
 input {
   margin-top: 25%;
   padding: 4px 50px;
@@ -31,4 +39,50 @@ input {
   border: 1px solid red;
   padding: 1px 10px;
   font-family: "Courier New", "Courier", "Monaco";
+}
+
+.btn-three {
+  background: red;
+  color: white;
+  text-align: center;
+  border: 1px solid red;
+  padding: 1px 10px;
+  font-family: "Courier New", "Courier", "Monaco";
+}
+
+
+#logo-up {
+  margin-top: -224px;
+}
+
+#logo-in {
+  margin-top: -184px;
+}
+
+.signout {
+  display: none;
+  margin-top: 15%;
+}
+
+.logo-out {
+  margin-top: -224px;
+}
+
+.out {
+  width: 15%;
+    text-align: left;
+    font-family: "Courier New", "Courier", "Monaco";
+    position: fixed;
+    margin-left: -16%;
+    margin-top: 0%;
+}
+
+.sign-in-text {
+  margin: 0;
+  margin-top: 10px;
+	margin-bottom: 4px;
+	text-align: left;
+	font-size: 10px;
+	color: white;
+	font-family: "Courier New", "Courier", "Monaco";
 }

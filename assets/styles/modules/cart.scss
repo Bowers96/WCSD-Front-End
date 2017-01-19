@@ -3,14 +3,17 @@
  */
 
 #content {
-  height: 500px;
-    overflow: hidden;
+  height: auto;
     position: relative;
     border: 1px dotted white;
     position: relative;
     display: none;
-    margin: 15% auto;
+    margin: 10% auto;
     width: 60%;
+}
+
+#cart-body {
+  overflow: scroll;
 }
 
 .selected {
@@ -21,36 +24,29 @@
 }
 
 b {
-    font-weight: bold;
-}
-
-#cart-count {
-  margin: 0;
-  padding: 1em;
-  font-size: 14px;
-  border: 1px dotted white;
-  font-family: 'Megrim', cursive;
+    font-family: "Courier New", "Courier", "Monaco";
 }
 
 #cart-subtotal p {
   border-top: 1px dotted #999;
   border-left: 1px dotted #999;
   float: right;
-  font-weight: bold;
   line-height: 2.2em;
-  margin-top: 62%;
+  margin-top: 38%;
   font-size: 14px;
-  font-family: 'Megrim', cursive;
+  font-family: "Courier New", "Courier", "Monaco";
+  padding: 0 18px 0 18px
 }
 
 #cart-footer {
-    margin-top: 68%;
+    margin-top: 41.5%;
+    height: 42px;
     border-top: 1px dotted #999;
 }
 
 .checkout {
-  margin-left: 71.5%;
-  margin-top: 4px;
+  margin-left: 82.1%;
+  margin-top: 5px;
   position: absolute;
   cursor: pointer;
   font-size: 11px;
@@ -64,11 +60,12 @@ b {
   width: 98px;
   font-weight: bold;
   padding: 10px 25px;
+  text-decoration: none;
 }
 
 .continue {
-  margin-left: 48%;
-    margin-top: 4px;
+  margin-left: 67.7%;
+    margin-top: 5px;
     position: absolute;
     cursor: pointer;
     font-size: 11px;
@@ -83,6 +80,47 @@ b {
     text-decoration: none;
 }
 
+.delete {
+  margin-left: 53.4%;
+    margin-top: 5px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 11px;
+    background: slategrey;
+    border-radius: 0;
+    color: white;
+    display: block;
+    text-align: center;
+    width: 98px;
+    font-weight: bold;
+    padding: 10px 10px;
+    text-decoration: none;
+
+}
+
+#removed {
+  position: absolute;
+    margin-top: -6px;
+    margin-left: 76px;
+    cursor: pointer;
+    font-size: 11px;
+    background: red;
+    border: 1px solid red;
+    border-radius: 0;
+    color: #fff;
+    display: block;
+    padding: 0px;
+    text-align: center;
+    width: 98px;
+    font-weight: bold;
+}
+
 td{
-  color:white !important;
+  color: white;
+  padding-left: 20px;
+  font-family: "Courier New", "Courier", "Monaco";
+}
+
+#logo-cart {
+  margin-top: -130px;
 }

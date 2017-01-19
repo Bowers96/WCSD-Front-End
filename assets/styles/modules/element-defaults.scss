@@ -8,6 +8,7 @@ body {
   height: 100%;
   width: 100%;
 	background: black;
+  overflow: hidden;
 }
 
 h1 {
@@ -22,6 +23,8 @@ h1 {
 
 h3 {
   font-size: 21px;
+  font-family: "Courier New", "Courier", "Monaco";
+  font-weight: 100;
 }
 
 ul {
@@ -37,6 +40,10 @@ p {
 	font-size: 18px;
 	color: white;
 	font-family: 'Megrim', cursive;
+}
+
+a {
+	cursor: pointer;
 }
 
 // Homescreen animation
