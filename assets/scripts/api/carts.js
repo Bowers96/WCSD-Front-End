@@ -6,7 +6,6 @@ window.app = app;
 app.host = app.apiOrigins.production
 
 const addCart = function(data) {
-  console.log(store.user.token)
   return $.ajax({
     url: app.host + '/carts/',
     method: 'POST',

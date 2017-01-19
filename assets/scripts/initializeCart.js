@@ -19,7 +19,6 @@ export function translateCartToCartView(items) {
     if (item.itemId) {
       $(`#${item.itemId}`).find('form').on('submit', function(e) {
         e.preventDefault();
-        console.log("RADICAL")
         removeFromCart(item.itemId);
         updateCart();
       })

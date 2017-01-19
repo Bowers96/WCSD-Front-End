@@ -7,6 +7,10 @@ import {
 } from './api/carts'
 
 import {
+  getCart,
+} from './api/carts'
+
+import {
   translateCartToCartView
 } from './initializeCart'
 
@@ -16,7 +20,7 @@ $(() => {
     e.preventDefault();
     let creds = getFormFields(e.target);
     document.getElementById("sign-up").reset();
-    auth.signUp(creds).then(console.log);
+    auth.signUp(creds).then();
 
   });
 
@@ -24,6 +28,7 @@ $(() => {
     e.preventDefault();
     let creds = getFormFields(e.target);
     document.getElementById("sign-in").reset();
+
     auth.signIn(creds).then(data => {
       store.user = data.user;
     }).then(() => getOrCreateCart(translateCartToCartView))

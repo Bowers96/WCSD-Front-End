@@ -176,7 +176,6 @@ $('.products').on('submit', function(e) {
       $('#cart-body-table-body').append(translateItemToCartItem(item))
       $(`#${item.itemId}`).find('form').on('submit', function(e) {
         e.preventDefault();
-        console.log("RADICAL")
         removeFromCart(item.itemId);
         updateCart();
         $(`#${item.itemId}`).remove();
@@ -188,7 +187,6 @@ $('.products').on('submit', function(e) {
 
 
 export function removeFromCart(id) {
-  console.log(id)
   window.store.cart.items = window.store.cart.items.filter(e => {
     return e.itemId !== id
   });

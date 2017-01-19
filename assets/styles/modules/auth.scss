@@ -68,6 +68,10 @@ input {
   margin-top: -224px;
 }
 
+#logo-signout{
+  margin-top: -54px;
+}
+
 .out {
   width: 15%;
     text-align: left;
@@ -75,6 +79,15 @@ input {
     position: fixed;
     margin-left: -16%;
     margin-top: 0%;
+}
+
+.logout {
+  width: 45%;
+    text-align: left;
+    font-family: "Courier New", "Courier", "Monaco";
+    position: fixed;
+    margin-left: 32%;
+    font-size: 12px;
 }
 
 .sign-in-text {
