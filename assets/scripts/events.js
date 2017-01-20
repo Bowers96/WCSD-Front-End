@@ -22,7 +22,6 @@ $(() => {
     let {
       credentials
     } = creds;
-    console.log(credentials)
     if (credentials.password !== credentials.password_confirmation) {
       document.getElementById("sign-up").reset();
 

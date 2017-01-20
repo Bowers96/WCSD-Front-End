@@ -39,6 +39,10 @@ The first day of the project I spent on planning.:
 - developing ERD
 - defining my work processes
 
+After I got all the planning out of the way I began to work and develop my idea. I started develping the front-end and styled it to what I wanted and then I created my back-end. I went on to deploying it to Heroku. I then deployed my app to GitHub pages so it was all deployed on the internet.
+
+I finished everything up with my README.md's. Once I finished those I did a lot of debugging test to make sure everything was working correctly, I went on to asking my classmates to try and break my app and give me any feedback on it.
+
 ### User Stories
 We developed our user stories within Trello:<br>
 https://trello.com/b/8LmFqVsb/wcsd
