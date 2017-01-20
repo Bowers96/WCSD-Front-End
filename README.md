@@ -3,6 +3,8 @@
 # WCSD-Front-End
 
 The WCSD app is an E-Commerce app showcasing the latest and greatest trends today.
+
+![Active Game State](http://i.imgur.com/vwsVABE.png)
 ---
 
 ## Links
