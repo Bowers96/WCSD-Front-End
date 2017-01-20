@@ -42,8 +42,8 @@ We developed our user stories within Trello:<br>
 https://trello.com/b/8LmFqVsb/wcsd
 
 ### Wireframes and ERD
-Wireframes -  <br>
-ERD -
+Wireframes - http://i.imgur.com/lDor1xf.jpg  <br>
+ERD - http://i.imgur.com/JOSLAOY.png
 
 ## Major Hurdles
 I had to overcome the following challenge:
@@ -53,6 +53,7 @@ I had to overcome the following challenge:
 
 ## Future Enhancements
 - Adding Stripe
+- More stylistic changes
 
 
 ---
