@@ -27,6 +27,7 @@ const getCarts = function() {
 
 
 const getOrCreateCart = function(callback) {
+  $('.logged-in-element').show();
   return getCarts().then(data => {
     if (data.carts.length > 0) {
       store.cart = data.carts[0];

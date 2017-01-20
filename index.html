@@ -54,7 +54,7 @@
 	 </div>
    <!-- /Logo animation -->
 
-   <!-- Shop view -->>
+   <!-- Shop view -->
    <div class="shop wrapper">
 
     <div class="logo">
@@ -110,19 +110,17 @@
         $38
       </p>
 
-      <form data-item="unisex-t" data-price="38" class="products">
+      <form data-item="unisex-t" data-price="38" class="products logged-in-element">
       <select id="size" name="size">
         <option value="medium">medium</option>
         <option value="large">large</option>
         <option value="xlarge">xlarge</option>
       </select>
 
-      <input class="button" name="commit" type="submit" value="add to cart">
+      <input class="button logged-in-element" name="commit" type="submit" value="add to cart">
     </form>
 
-      <a class="button-continue keep-shopping">keep shopping</a>
-
-      <a href="" class="next">next item &gt;</a>
+      <a class="button-continue keep-shopping logged-in-element">keep shopping</a>
     </div>
   </div>
 
@@ -154,18 +152,17 @@
         $30
       </p>
 
-      <form data-item="hat" data-price="30" class="products">
+      <form data-item="hat" data-price="30" class="products logged-in-element">
       <select id="size" name="size">
         <option value="medium">medium</option>
         <option value="large">large</option>
         <option value="xlarge">xlarge</option>
       </select>
 
-      <input class="button" name="commit" type="submit" value="add to cart">
+      <input class="button logged-in-element" name="commit" type="submit" value="add to cart">
     </form>
 
-      <a class="button-continue keep-shopping">keep shopping</a>
-      <a href="" class="next">next item &gt;</a>
+      <a class="button-continue keep-shopping logged-in-element">keep shopping</a>
     </div>
   </div>
 <!-- /Hat -->
@@ -195,17 +192,16 @@
       <p class="item-text price">
         $58
       </p>
-      <form data-item="sweater" data-price="58" class="products">
+      <form data-item="sweater" data-price="58" class="products logged-in-element">
       <select id="size" name="size">
         <option value="medium">medium</option>
         <option value="large">large</option>
         <option value="xlarge">xlarge</option>
       </select>
 
-      <input class="button" name="commit" type="submit" value="add to cart">
-      <a class="button-continue keep-shopping">keep shopping</a>
+      <input class="button logged-in-element" name="commit" type="submit" value="add to cart">
+      <a class="button-continue keep-shopping logged-in-element">keep shopping</a>
     </form>
-      <a href="" class="next">next item &raquo;</a>
     </div>
   </div>
 <!-- /Sweater -->
@@ -264,15 +260,14 @@
 
     </div>
     <div id="cart-footer">
-      <a href="#" class="checkout">checkout now</a>
-      <a href="#" class="continue">keep shopping</a>
-      <a href="#" class="delete">delete cart</a>
+      <a href="#" class="continue logged-in-element" id="continue-btn">keep shopping</a>
+      <a href="#" class="delete logged-in-element">reset cart</a>
     </div>
   </div>
 <!-- /Cart -->
 
 <!-- Sign Up -->
-<div class="authentication">
+<div class="authentication auth-hide">
 
     <div class="logo item-logo" id="logo-in">
       <div class="title-two" id="diamond-two">
@@ -288,8 +283,10 @@
 
     <div class="out"><p class="sign-in-text">Sign up if you want to save items to a cart for a later time.</p></div>
 
-<div class="sign-up">
+<div class="sign-up ">
       <form id="sign-up">
+        <div class="inline-alert">something went wrong, try again</div>
+
         <input class="input" type="text" name="credentials[email]" placeholder="email"><br>
         <input class="input" type="password" name="credentials[password]" placeholder="password"><br>
         <input class="input" type="password" name="credentials[password_confirmation]" placeholder="confirm password"><br>
@@ -304,7 +301,7 @@
 
 <!-- Sign In -->
 
-<div class="sign-in">
+<div class="sign-in auth-hide ">
   <div class="logo item-logo" id="logo-up">
     <div class="title-two" id="diamond-two">
       <h1 class="two"> WCSD </h1>
@@ -317,8 +314,10 @@
     </div>
   </div>
 
-  <div class="out"><p class="sign-in-text">Sign in if you want to add some items to your cart and come back later.</p></div>
+  <div class="out "><p class="sign-in-text">Sign in if you want to add some items to your cart and come back later.</p></div>
         <form id="sign-in">
+          <div class="inline-alert">something went wrong, try again</div>
+
           <input class="input" type="text" name="credentials[email]" placeholder="email"><br>
           <input class="input" type="password" name="credentials[password]" placeholder="password"><br>
           <input type="submit" class="btn-two" href="#"><i>sign in</i></input>

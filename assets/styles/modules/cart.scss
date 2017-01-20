@@ -12,6 +12,32 @@
     width: 60%;
 }
 
+.alert{
+  position:absolute;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  width:250px;
+  color:white;
+  border-radius:6px;
+  padding:10px;
+  height:50px;
+  font-size:12px;
+  background-color:slategrey;
+  font-family: "Courier New", "Courier", "Monaco";
+
+}
+.inline-alert{
+  color:black;
+  font-family: "Courier New", "Courier", "Monaco";
+  font-size:12px;
+margin-bottom:12px;
+  width:250px;
+
+}
+
 #cart-body {
   overflow: scroll;
 }
@@ -54,7 +80,6 @@ b {
   border: 1px solid red;
   border-radius: 0;
   color: #fff;
-  display: block;
   padding: 0px;
   text-align: center;
   width: 98px;
@@ -72,7 +97,6 @@ b {
     background: white;
     border-radius: 0;
     color: black;
-    display: block;
     text-align: center;
     width: 98px;
     font-weight: bold;
@@ -89,7 +113,6 @@ b {
     background: slategrey;
     border-radius: 0;
     color: white;
-    display: block;
     text-align: center;
     width: 98px;
     font-weight: bold;

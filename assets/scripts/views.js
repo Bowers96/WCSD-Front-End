@@ -1,8 +1,13 @@
 'use strict';
 import {
   updateCart,
-  deleteCart
+  deleteCart,
+  getOrCreateCart,
+
 } from './api/carts';
+import {
+  translateCartToCartView
+} from './initializeCart'
 
 
 
@@ -14,6 +19,7 @@ $('#up').on('click', function() {
   $('.about-wcsd').hide();
   $('.shop').hide();
   $('.signout').hide();
+  $('.item-one').hide();
 });
 
 $('#in').on('click', function() {
@@ -24,6 +30,7 @@ $('#in').on('click', function() {
   $('.about-wcsd').hide();
   $('.shop').hide();
   $('.signout').hide();
+  $('.item-one').hide();
 });
 
 
@@ -128,10 +135,23 @@ $('#out').on('click', function() {
 $('.button-continue').on('click', function() {
   $('.item-one').hide();
   $('.shop').show();
+
 });
 
 $('.delete').on('click', function() {
-  deleteCart();
+  deleteCart().then(() => {
+    $('#cart-body-table-body').html('')
+    getOrCreateCart(translateCartToCartView)
+    $('#content').append('<div class="alert">Your cart has been deleted, a fresh cart has been created for you!</div>')
+    setTimeout(function() {
+      $('.alert').remove();
+    }, 1500)
+  })
+});
+
+$('#continue-btn').on('click', function() {
+  $('.shop').show();
+  $('#content').hide();
 })
 
 
